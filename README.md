@@ -1,3 +1,20 @@
+# Simple LDAP server simulating AD for integration testing
+
+This is a simple LDAP server that tries to simulate an AD using 
+Apache Directory Server.
+
+* Should work for activedirectory.js
+* Is based on https://github.com/kwart/ldap-server/ and https://github.com/dwimberger/ldap-ad-it and
+   http://stackoverflow.com/questions/11174835/add-memberof-attribute-to-apacheds
+
+
+## Docker
+
+1. Build image `docker build -t noam/ldap-ad-it .`
+2. Run the image using  
+   `docker run -it --rm -p 10389:10389 noam/ldap-ad-it`
+
+
 # ldap-server
 
 Simple all-in-one LDAP server (wrapped [ApacheDS](http://directory.apache.org/apacheds/)).
@@ -5,6 +22,7 @@ Simple all-in-one LDAP server (wrapped [ApacheDS](http://directory.apache.org/ap
 You don't need any configuration files to get it working. Just launch the JAR and that's it.
 
 Server data are not persisted, they just live in memory.
+
 
 ## Download
 
